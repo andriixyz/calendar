@@ -1,22 +1,93 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
+}
+#calendar {
+}
+.calendar-events {
+  width: 200px;
+}
+.calendar-events ul li {
+  display: inline-block;
+}
+.calendar-events ul {
+  height: 600px;
+  width: 200px;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
+.calendar-event {
+  position: absolute;
+  width: 100%;
+  background-color: #e2ecf5;
+  font-size: 14px;
+  border-inline-start: 3px solid #6e9ecf;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calendar-event-button {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.calendar-add-form {
+  margin-bottom: 50px;
+}
+@keyframes blinking {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+.calendar-event-selected {
+  background-color: #cde3f7;
+  animation: blinking 0.5s infinite;
+  animation-direction: alternate;
+}
+.calendar-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 2px;
+}
+.calendar-time {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  width: 50px;
+  height: 100%;
+}
+.calendar-time-numbers {
+  font-weight: 200;
+}
+.calendar-cell {
+  display: flex;
+  align-items: flex-start;
+  height: 30px;
+}
+.time-numbers-large {
+  font-size: 16px;
+  height: 15px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.time-numbers-small {
+  font-size: 12px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #09d3ac;
+.calendar-events-time {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
 }

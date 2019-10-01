@@ -2,7 +2,10 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
+    "axios": "^0.19.0",
+    "npm-watch": "^0.6.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-redux": "^7.1.1",
@@ -13,7 +16,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "build": "src/"
   },
   "eslintConfig": {
     "extends": "react-app"

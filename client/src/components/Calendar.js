@@ -1,14 +1,18 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import AddForm from "./AddForm";
 import CalendarEvents from "./CalendarEvents";
-
-export default class Calendar extends Component {
+import CalendarTime from "./CalendarTime";
+class Calendar extends Component {
   render() {
     return (
-      <div>
-        <AddForm></AddForm>
-        <CalendarEvents></CalendarEvents>
+      <div id="calendar">
+        <AddForm />
+        <div className="calendar-events-time">
+          <CalendarTime />
+          <CalendarEvents />
+        </div>
       </div>
     );
   }
 }
+export default Calendar;
